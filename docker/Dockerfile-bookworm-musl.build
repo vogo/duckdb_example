@@ -1,0 +1,11 @@
+
+FROM golang:1.25-bookworm
+
+# Install build dependencies
+RUN apt install -y musl-tools
+
+# Set working directory
+WORKDIR /app
+
+# Default command (can be overridden)
+CMD ["bash"]

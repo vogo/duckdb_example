@@ -1,0 +1,14 @@
+
+FROM golang:1.25-bookworm
+
+# Install build dependencies
+RUN apt install -y g++ libstdc++-dev
+
+# Set working directory
+WORKDIR /app
+
+# Default command (can be overridden)
+CMD ["bash"]
+
+# docker build -t golang-cpp:1.25-bookworm -f Dockerfile-bookworm.build .
+# docker run --rm -v "$(pwd)":/app golang-cpp:1.25-bookworm sh -c 'go build -ldflags "-s -w" -o dist/main main.go'
