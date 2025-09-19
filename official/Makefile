@@ -4,7 +4,7 @@ docker-version:
 build:
 	docker run --rm -v "$$(pwd)":/app \
 	-v ~/go:/go \
-	go-cpp-builder:1.25 sh -c 'GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o dist/main main.go'
+	golang-cpp:1.25-bookworm sh -c 'GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o dist/main main.go'
 
 
 build-static:

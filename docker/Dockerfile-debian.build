@@ -1,5 +1,5 @@
 # Use Debian-based Go image to avoid musl libc compatibility issues with DuckDB
-FROM golang:1.23-bookworm
+FROM golang:1.25-bookworm
 
 # Install build dependencies
 RUN apt-get update && apt-get install -y \

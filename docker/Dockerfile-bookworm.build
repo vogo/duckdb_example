@@ -11,4 +11,3 @@ WORKDIR /app
 CMD ["bash"]
 
 # docker build -t golang-cpp:1.25-bookworm -f Dockerfile-bookworm.build .
-# docker run --rm -v "$(pwd)":/app golang-cpp:1.25-bookworm sh -c 'go build -ldflags "-s -w" -o dist/main main.go'
